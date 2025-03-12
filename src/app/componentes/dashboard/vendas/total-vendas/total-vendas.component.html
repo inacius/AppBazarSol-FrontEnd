@@ -1,0 +1,48 @@
+<mat-tab-group >
+  <mat-tab label="Principal" >
+  
+    <div class="container p-2">
+      <div class="text-center">
+      <mat-form-field class="">
+      <mat-label class="">Data</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="select" class="">
+        <mat-option *ngFor="let datas of listaDeDatas" [value]="datas" (click)="AtualizarValores()" class="">
+          {{datas | date: 'dd-MM-yyyy'}}
+        </mat-option>
+      </mat-select>  
+    </mat-form-field>   
+      </div>
+    <div class="col-12"></div> 
+    <div class="text-center">
+      <app-mostrar-total [valor]="totalDia" [texto]="'Total Dia'" class="p-2"></app-mostrar-total>
+      <app-mostrar-total [valor]="semRecarga" [texto]="'Sem Recarga'" class="p-2"></app-mostrar-total>
+      <app-mostrar-total [valor]="totalRecargaDia" [texto]="'Recarga'" class="p-2"></app-mostrar-total>
+      <app-mostrar-total [valor]="totalServicoPCDia" [texto]="'Serviços'" class="p-2"></app-mostrar-total>
+    </div>
+    </div>
+    <div style="text-align: -webkit-center;">
+      <div class="col-7" >
+        <div style="display: block;">
+          <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [colors]="barChartColors" 
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+          </canvas>
+        </div>   
+      </div>
+    </div>
+    
+  </mat-tab>
+  <mat-tab label="Detalhado"> <app-lista-produtos-venda></app-lista-produtos-venda> </mat-tab>
+  <mat-tab label="Resumo"><app-relatorio-resumo></app-relatorio-resumo></mat-tab>
+  <mat-tab label="Balanco"><app-relatorio-balanco></app-relatorio-balanco></mat-tab>
+  <mat-tab label="Compras"><app-compras-mes></app-compras-mes></mat-tab>
+</mat-tab-group>
+
+
+
+

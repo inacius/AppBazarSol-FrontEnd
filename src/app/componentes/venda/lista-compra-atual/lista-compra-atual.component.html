@@ -1,0 +1,52 @@
+<mat-label class="alert alert-warning total">TOTAL {{totalVenda |currency:'BRL'}}</mat-label>
+<table mat-table [dataSource]="dataSource" class="backGround m-2">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let opera"> {{opera.nome}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="quantidade">
+    <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+    <td mat-cell *matCellDef="let opera"> {{opera.quantidade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="preco">
+    <th mat-header-cell *matHeaderCellDef> Valor (R$) </th>
+    <td mat-cell *matCellDef="let opera"> {{opera.preco | currency:'BRL'}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="totalProduto">
+    <th mat-header-cell *matHeaderCellDef> Total (R$) </th>
+    <td mat-cell *matCellDef="let opera"> {{opera.totalProduto | currency:'BRL'}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="remover">
+    <th mat-header-cell *matHeaderCellDef> Remover </th>
+    
+    <td mat-cell *matCellDef="let opera; let i = index"> 
+      <button mat-icon-button (click)="removeProdutoLista(opera.id)">
+        <mat-icon>delete</mat-icon>
+      </button>  
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"  (click)="ajustarProduto(row.id)" ></tr>
+  
+</table>
+
+<div class="d-flex justify-content-center ">
+<button mat-raised-button 
+[id]=""
+(click)="finalizaVenda()"
+[disabled]=bloqueiaFinalizar
+class="button"
+>Finalizar</button>
+</div>

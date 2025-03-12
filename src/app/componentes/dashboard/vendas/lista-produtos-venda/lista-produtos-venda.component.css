@@ -1,0 +1,8 @@
+table {
+    width: 100%;
+  }
+
+  .mat-row:hover {
+    background-color: rgb(253, 253, 167);
+    cursor: pointer;
+  }

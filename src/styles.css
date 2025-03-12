@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+.welcome-container {
+  background-image: url("/assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; 
+  color: hsl(0, 0%, 0%);  
+}
+
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background: linear-gradient(45deg, #0099ff, #47bbff);
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.backGroundListas{
+  background-color: rgb(255, 251, 190);
+}
+
+.button:hover {
+  background: linear-gradient(45deg, #4778ff, #6b97ff);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

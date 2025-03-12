@@ -1,0 +1,80 @@
+<form [formGroup]="recargaForm" class="mt-4 border border-info" align="center">
+
+  <div class="form-group">
+    <input formControlName="id"
+    class="form-control"
+    type="number"
+    placeholder="ID"
+    disabled
+    ></div>
+
+    <div class="form-group">
+      <input formControlName="nome"
+      class="form-control"
+      placeholder="Nome"
+      autofocus
+      >    
+    </div>
+
+    <div class="form-group">
+      <input formControlName="idProduto"
+      class="form-control"
+      placeholder="idProduto">    
+    </div>
+
+    <div class="form-group">
+      <input formControlName="ativa"
+      class="form-control"
+      type="checkbox">
+    </div>
+
+    <div class="form-group">
+      <input #novoValor
+      formControlName="valorNovo"
+      class="form-control"
+      placeholder="Novo valor">    
+    </div>
+
+
+
+
+    <button
+    [disabled]=eNovo
+    (click)="IncluirValor(novoValor.value)"
+    class="btn btn-primary btn-block"
+    type="submit"
+    >Add Valor</button> 
+    
+    <button
+    [disabled]=eNovo
+    (click)="RemoveValor()"
+    class="btn btn-primary btn-block"
+    >Remove Valor</button> 
+
+    <div class="form-group">
+    <select name="valores" size="4" multiple (change)="ValorSelect($event)">
+      <option value="{{valor.id}}" *ngFor="let valor of valores; let i = index">{{valor.valor |currency:'BRL'}}</option>
+    </select>
+  </div>
+
+    
+    <div *ngIf="eNovo; else Atualizar;">
+    <button
+          [disabled]="recargaForm.invalid"
+          (click)="IncluirOperadora()"
+          type="submit"
+          class="btn btn-primary btn-block"
+    >Incluir</button>
+    </div>
+
+    <ng-template #Atualizar>
+    <button    
+    [disabled]="recargaForm.invalid"
+    (click)="AtualizarOperadora()"
+    type="submit"
+    class="btn btn-primary btn-block"
+    >Atualizar</button>
+    </ng-template>
+  
+
+  </form>

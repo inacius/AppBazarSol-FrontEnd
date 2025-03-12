@@ -1,0 +1,98 @@
+<div align="center">
+<h4>Controle de Caixa</h4>
+<mat-form-field>
+  <mat-label>Data</mat-label>
+  <mat-select [(ngModel)]="selectedValue" name="select" >
+    <mat-option *ngFor="let datas of listaDeDatas" [value]="datas" (click)="AtualizarValores()">
+      {{datas | date: 'dd-MM-yyyy'}}
+    </mat-option>
+  </mat-select>  
+</mat-form-field>
+<form [formGroup]="controleCaixaForm" class="mt-4 border border-info col-3">
+    <div>
+        <h3>Abrir Caixa</h3>
+        <span>Moedas</span>
+    <div class="form-group col-5">
+        <input formControlName="moedasAbrir"
+        class="form-control"
+        style="text-align: center;"
+        placeholder="Moedas"
+        autofocus>
+    </div>
+    <span>Notas</span>
+    <div class="form-group col-5">
+        <input formControlName="notasAbrir"
+        class="form-control"    
+        style="text-align: center;"   
+        placeholder="Notas" 
+        autofocus>
+    </div>
+    </div>
+
+    <div *ngIf="aberto;then FormFecharCaixa"></div>
+
+    <ng-template #FormFecharCaixa>
+        <h3>Fechar Caixa</h3>
+        <div>
+            <span>Moedas</span>
+            <div class="form-group col-5">
+                <input formControlName="moedasFechar"
+                style="text-align: center;"
+                class="form-control" 
+                placeholder="Moedas" 
+                >
+            </div>
+            <span>Notas</span>
+            <div class="form-group col-5">
+                <input formControlName="notasFechar"
+                style="text-align: center;"
+                class="form-control" 
+                placeholder="Notas" 
+                >
+            </div>
+            <span>Outros</span>
+            <div class="form-group col-5">
+                <input formControlName="outrosFechar"
+                style="text-align: center;"
+                class="form-control" 
+                placeholder="Outros" 
+                >
+            </div>
+            </div>
+    </ng-template>
+
+
+    <div class="form-group">
+        <input formControlName="status"
+        class="form-control" 
+        placeholder="status" 
+        hidden>
+    </div>
+<!--  -->
+    <div *ngIf="aberto;then fechaCaixa else abreCaixa"></div>
+  
+    <ng-template #fechaCaixa>
+        <button mat-raised-button bg-primary
+        [disabled]="controleCaixaForm.invalid"
+        (click)="FecharCaixa()"
+        type="submit"
+        class="bg-info text-white rounded"
+        >Fechar Caixa</button>
+    </ng-template>
+    
+    <ng-template #abreCaixa>
+        <button mat-raised-button bg-primary
+        [disabled]="controleCaixaForm.invalid"
+        (click)="AbrirCaixa()"
+        type="submit"
+        class="bg-info text-white rounded"
+        >Abrir Caixa</button>
+    </ng-template>
+    <div *ngIf="fechado;then a"></div>
+    <ng-template #a><h4>Fechado</h4></ng-template>
+    
+
+</form>
+    
+
+</div>

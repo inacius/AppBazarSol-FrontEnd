@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div  class="row">
+    <div #ladoEsquedo class="col-3 p-1">
+      <div #ladoEsquerdoCima class="m-1 rounded" style="height: 60vh;">
+      <app-busca-produto (enviaIDProduto)="recebeIDBusca($event)" (enviaQuantidade)="recebeQuantidade($event)" [atualizaContadorQuantidade]="contadorQuantidade"></app-busca-produto>        
+      </div>
+      <p class="atalhos">Atalhos</p>
+      <div #ladoEsquerdoBaixo class="m-1 rounded" style="height: 40vh;">
+        <app-painel-venda-rapida  (enviaIDProduto)="recebeIDAtalho($event)" class="d-flex flex-row flex-wrap"></app-painel-venda-rapida>
+      </div>
+    </div>
+    <div #ladoDireito class="col-9 p-1 d-flex flex-row flex-fill ">
+      <div #ladoDireitoCentro class="col-12 rounded"  >
+        <app-lista-compra-atual [produtoVenda]="produtoVenda" class="m-1"></app-lista-compra-atual>
+      </div>
+    </div>  
+  </div>  
+
+ 
+
+
+ 
+</div>

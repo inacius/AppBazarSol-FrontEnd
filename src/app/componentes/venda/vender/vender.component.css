@@ -1,0 +1,43 @@
+.alinha-tela-esquerda {
+position: absolute;
+left: 1px;
+top:5px;
+}
+
+.alinha-tela-direita {
+    position: absolute;
+    top: 5px;
+    justify-content: center;
+}
+
+.topo{
+    background-color: yellow;
+}
+.esquerda{
+    overflow-y: auto;
+    background-color: lightblue;
+    
+}
+
+.direita{
+    background-color: lightgreen;
+}
+
+.telaInteira{
+    height: 800px;
+    min-height: 100%;
+}
+
+.atalhos {
+    font-weight: bold;
+    border: 2px rgb(253, 253, 167); /* You can change the color and width as needed */
+    padding: 10px; /* Add some padding for better appearance */
+    display: block; /* Ensure the element takes up the full width */
+    width: 100%; /* Set the width to 100% */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-radius: 5px; /* Add rounded corners */
+    text-align: center; /* Center the text */
+    background-color:lightyellow; /* Match the background color with other elements */
+    color: #927000; /* Set the text color */
+    margin: 10px 0; /* Add some margin for spacing */
+}

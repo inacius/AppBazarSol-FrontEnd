@@ -1,0 +1,17 @@
+<div>
+  <button mat-raised-button
+  (click)="diminui()"
+  class="bg-warning">-</button>
+
+  <input
+  class="m-1"
+  size="3"
+  style="vertical-align: middle;text-align: center;"
+  [value]=quantidade
+  [(ngModel)]="quantidade"
+  (keyup)="enviaQuantidadeDigitada()">
+
+  <button mat-raised-button
+  (click)="aumenta()"
+  class="bg-warning">+</button>
+</div>

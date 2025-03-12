@@ -1,0 +1,8 @@
+<form class="example-form">
+  <mat-form-field>
+    <mat-label>Novo valor</mat-label>
+    <input matInput [(ngModel)]="valorDesconto" name="desconto">
+  </mat-form-field>  
+  <button mat-raised-button color="primary" [mat-dialog-close]="valorDesconto">Ok</button>
+</form>
+

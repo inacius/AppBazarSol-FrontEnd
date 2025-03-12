@@ -1,0 +1,60 @@
+<h4 align="center">Fornecedor</h4>
+<form [formGroup]="formFornecedor">
+    <span>ID</span>
+    <div class="form-group">
+        <input formControlName="id"
+        class="form-control"
+        disabled
+        placeholder="ID">
+    </div>
+    <span>Nome</span>
+    <div class="form-group">
+        <input formControlName="nome"
+        class="form-control"
+        placeholder="Nome"
+        autofocus>
+    </div>
+    <span>Contato</span>
+    <div class="form-group">
+        <input formControlName="contato"
+        class="form-control"
+        placeholder="Contato">
+    </div>
+    <span>Endereco</span>
+    <div class="form-group">
+        <input formControlName="endereco"
+        class="form-control"
+        placeholder="Endereco">
+    </div>
+    <span>E-mail</span>
+    <div class="form-group">
+        <input formControlName="email"
+        class="form-control"
+        placeholder="Email">
+    </div>
+    <span>Telefone</span>
+    <div class="form-group">
+        <input formControlName="telefone"
+        class="form-control"
+        placeholder="Telefone">
+    </div>
+
+    <div *ngIf="!fornecedorSelecionado; else Atualizar">
+    <button  mat-raised-button bg-primary
+    [disabled]="formFornecedor.invalid"
+    (click)="IncluirFornecedor()"
+    type="submit"
+    class="bg-info text-white rounded"
+    >Incluir</button>
+    </div>
+
+    <ng-template #Atualizar>
+        <button mat-raised-button bg-primary
+        [disabled]="formFornecedor.invalid"
+        (click)="AtualizarFornecedor()"
+        type="submit"
+        class="bg-info text-white rounded"
+        >Atualizar</button>
+        </ng-template>
+
+</form>

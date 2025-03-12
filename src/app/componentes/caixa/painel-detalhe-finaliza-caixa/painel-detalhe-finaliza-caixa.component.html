@@ -1,0 +1,24 @@
+<h1>Algo esta errado</h1>
+<h5>Verifique os valores</h5>
+<p></p>
+<h5>O valor inserido foi:</h5>
+<h4>Total: {{data.notasFechar + data.moedasFechar + data.outrosFechar | currency:'BRL'}} </h4>
+<h6>Moedas: {{data.moedasFechar | currency:'BRL'}} </h6>
+<h6>Notas: {{data.notasFechar | currency:'BRL'}} </h6>
+<h6>Outros: {{data.outrosFechar | currency:'BRL'}} </h6>
+<p></p>
+<h4 style="color: red;">Esperado: {{data.totalEsperado | currency:'BRL'}}</h4>
+<h4>Abertura do caixa: {{data.totalCaixaInicial | currency:'BRL'}}</h4>
+<h4>Vendas hoje: {{data.totalVendasDia | currency:'BRL'}}</h4>
+<h6>Dinheiro: {{data.valorDinheiro | currency:'BRL'}}</h6>
+<h6>Debito: {{data.valorDebito | currency:'BRL'}}</h6>
+<h6>Credito: {{data.valorCredito | currency:'BRL'}}</h6>
+<h6>Outros: {{data.valorOutros | currency:'BRL'}}</h6>
+<p></p>
+<h4>Saidas hoje: {{data.totalSaida | currency:'BRL'}}</h4>
+<p></p>
+<h4 style="color: red;">Diferenca: {{data.totalEsperado - (data.notasFechar + data.moedasFechar + data.outrosFechar) | currency:'BRL'}}</h4>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Ok</button>    
+  </mat-dialog-actions>

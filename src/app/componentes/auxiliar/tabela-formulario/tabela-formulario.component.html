@@ -1,0 +1,89 @@
+<p>Cadastro de Produtos</p>
+
+<form [formGroup]="formulario">
+<div class="form-group">
+  <input formControlName="campo1"
+  class="form-control"
+  type="number"
+  disabled
+  placeholder="ID"
+  autofocus
+  ></div>
+
+  <div class="form-group">
+  <input formControlName="campo2"
+  class="form-control"
+  placeholder="Nome">
+</div>
+
+<div class="form-group">
+  <input formControlName="campo3"
+  class="form-control"
+  type="number"
+  placeholder="Preco">
+</div>
+
+<div class="form-group">
+  <input formControlName="campo4"
+  class="form-control"
+  type="date"
+  value="2013-01-08"
+  placeholder="Data Ultima Compra">
+</div>
+
+<div class="form-group">
+  <div class="check">Controla estoque</div>
+  <input formControlName="campo5"
+  class="form-control"
+  type="checkbox">
+</div>
+
+<div class="form-group">
+  <div class="check">Atalho</div>
+  <input formControlName="campo6"
+  class="form-control"
+  type="checkbox">
+</div>
+
+<div class="form-group">
+  <div class="check">Servico</div>
+  <input formControlName="campo7"
+  class="form-control"
+  type="checkbox">
+</div>
+
+<div class="form-group">
+  <input formControlName="campo8"
+  class="form-control"
+  type="number"
+  placeholder="Quantidade">
+</div>
+
+<div class="form-group">
+  <input formControlName="campo9"
+  class="form-control"
+  type="number"
+  placeholder="Codigo de Barras">
+</div>
+
+<!-- <div *ngIf="produtoAtual[0];then veioConsulta else veioDialog"></div>
+  
+<ng-template #veioDialog>
+    <button  mat-raised-button bg-primary
+    [disabled]="incluirProduto.invalid"
+    (click)="IncluirProduto()"
+    [mat-dialog-close]=0
+    type="submit"
+    class="bg-info text-white rounded"
+    >Incluir</button>
+</ng-template>
+<ng-template #veioConsulta>
+  <button  mat-raised-button bg-primary
+  [disabled]="incluirProduto.invalid"
+  (click)="IncluirProduto()"
+  type="submit"
+  class="bg-info text-white rounded"
+  >Atualizar</button>
+</ng-template> -->
+
+</form>

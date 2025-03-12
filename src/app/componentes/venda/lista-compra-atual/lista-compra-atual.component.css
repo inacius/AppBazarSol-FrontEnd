@@ -1,0 +1,17 @@
+.mat-row:hover {
+  background-color: rgb(253, 253, 167);
+  cursor: pointer;
+}
+
+.total {
+display: flex;  
+justify-content: center;
+}
+
+table {
+width: 100%;
+}
+
+.backGround{
+background-color: rgb(255, 251, 190);
+}

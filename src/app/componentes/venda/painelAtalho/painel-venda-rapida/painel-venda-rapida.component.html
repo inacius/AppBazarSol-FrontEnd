@@ -1,0 +1,6 @@
+
+  <div *ngFor="let atalho of listaAtalho">
+      {{atalho.Nome}}
+    <app-painel-venda-rapida-botao (messageEvent)="recebeID($event)" [atalhoBotao]="atalho" class=""></app-painel-venda-rapida-botao>
+    
+  </div>

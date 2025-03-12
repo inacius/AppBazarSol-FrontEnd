@@ -1,0 +1,10 @@
+<p>compras-mes works!</p>
+<db-angular-pivot-table [source]="source" [configs]='configs'></db-angular-pivot-table>
+
+
+
+<button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+            <p></p>
+            <div class="col-md-3 col-xs-12">                
+            <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs2"></db-angular-tree-grid>
+            </div>

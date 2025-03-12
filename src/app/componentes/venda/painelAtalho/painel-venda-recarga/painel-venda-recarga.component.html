@@ -1,0 +1,21 @@
+<div class="d-flex flex-row flex-wrap">
+  <div class="m-1" *ngFor="let operadora of operadoras; let i = index" >
+    <button mat-raised-button 
+    [id]="operadora.id"
+    (click)="mostraOpcoes(operadora.id)"
+    type="submit"
+    class="bg-primary text-white rounded p-4 btn-block"
+    >{{operadora.nome}}</button>
+    </div>
+</div>
+    <p></p>
+    <div #PainelInferior class="d-flex flex-row flex-wrap">
+    <div  class="m-1" *ngFor="let valor of valores; let i = index">
+      <button mat-raised-button 
+      [id]=""
+      type="submit"
+      class="bg-warning text-white rounded p-4 btn-block"
+      [mat-dialog-close]="[valor.valor,idProdutoOperadora]"
+      >R${{valor.valor}}</button>
+      </div>
+    </div>

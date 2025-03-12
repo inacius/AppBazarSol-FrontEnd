@@ -1,0 +1,46 @@
+<div class="container">
+    <p></p>
+    <mat-form-field>
+        <mat-label>Data</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="select" >
+          <mat-option *ngFor="let datas of listaDeDatas" [value]="datas" (click)="AtualizarValores()">
+            {{datas | date: 'dd-MM-yyyy'}}
+          </mat-option>
+        </mat-select>  
+      </mat-form-field>
+    <p></p>
+    Vendas
+<P>
+<app-mostrar-total [valor]="relatorioGeral.vendasDia" [texto]="'Dia'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.vendasMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.vendasAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</P>
+Servico
+<p>
+<app-mostrar-total [valor]="relatorioGeral.servicoDia" [texto]="'Dia'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.servicoMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.servicoAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</p>
+Recarga
+<p>
+<app-mostrar-total [valor]="relatorioGeral.recargaDia" [texto]="'Dia'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.recargaMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.recargaAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</p>
+Saidas
+<p>
+<app-mostrar-total [valor]="relatorioGeral.saidasDia" [texto]="'Dia'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.saidasMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.saidasAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</p>
+Compras Realizadas
+<p>
+<app-mostrar-total [valor]="relatorioGeral.comprasRealizadasMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.comprasRealizadasAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</p>
+Compras Pagas
+<p>
+<app-mostrar-total [valor]="relatorioGeral.comprasPagasMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="relatorioGeral.comprasPagasAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+</p>
+</div>

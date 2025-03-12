@@ -1,0 +1,13 @@
+<div class="container">
+    <p></p>
+    
+    <div align="center">
+        Balanco
+        <p></p>
+<app-mostrar-total [valor]="balancoMes" [texto]="'Mes'" class="p-2"></app-mostrar-total>
+<app-mostrar-total [valor]="balancoAno" [texto]="'Ano'" class="p-2"></app-mostrar-total>
+    </div>
+    <p></p>
+
+<app-grafico [dados]="graficoDados"></app-grafico>
+</div>

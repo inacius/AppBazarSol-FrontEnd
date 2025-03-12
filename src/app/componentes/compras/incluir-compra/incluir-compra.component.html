@@ -1,0 +1,79 @@
+<form [formGroup]="formCompra" class="container">
+    <h4>Compra</h4>
+
+    <div class="form-group">
+    <mat-form-field>
+    <mat-label>Fornecedor</mat-label>
+    <mat-select [(ngModel)]="selectedValue.nome"  formControlName="fornecedor">
+      <mat-option *ngFor="let fornecedor of listaFornecedores" [value]="fornecedor.nome" (click)="AtualizarValores()">
+        {{fornecedor.nome}}
+      </mat-option>
+    </mat-select>  
+    </mat-form-field>
+    </div>
+
+    <span>ID</span>
+    <div class="form-group">
+        <input formControlName="id"
+        class="form-control"
+        disabled
+        placeholder="ID">
+    </div>
+    <span>Valor</span>
+    <div class="form-group">
+        <input formControlName="valor"
+        class="form-control"
+        placeholder="Valor"
+        autofocus>
+    </div>
+    <span>Data da Compra</span>
+    <div class="form-group">
+        <input formControlName="dataCompra"
+        class="form-control"
+        type="date"
+        placeholder="Data Compra"
+        [ngModel]="dataCompraAjustado | date:'yyyy-MM-dd'"
+        >
+        
+    </div>
+    <span>Parcelas</span>
+    <div class="form-group">
+        <input formControlName="parcelas"
+        class="form-control"
+        placeholder="Parcelas">
+    </div>
+    <span>Data do Primeiro Pagamento</span>
+    <div class="form-group">
+        <input formControlName="dataPrimeiroPagamento"
+        class="form-control"
+        type="date"
+        placeholder="Primeiro Pagamento"
+        [ngModel]="dataPrimeiroPagamentoAjustado | date:'yyyy-MM-dd'">
+    </div>
+    <span>NF</span>
+    <div class="form-group">
+        <input formControlName="nf"
+        class="form-control"
+        placeholder="Nota Fiscal">
+    </div>
+
+
+    <div *ngIf="!compraSelecionada; else Atualizar">
+    <button  mat-raised-button bg-primary
+    [disabled]="formCompra.invalid"
+    (click)="incluirCompra()"
+    type="submit"
+    class="bg-info text-white rounded"
+    >Incluir</button>
+    </div>
+
+    <ng-template #Atualizar>
+        <button mat-raised-button bg-primary
+        [disabled]="formCompra.invalid"
+        (click)="AtualizarCompra()"
+        type="submit"
+        class="bg-info text-white rounded"
+        >Atualizar</button>
+        </ng-template>
+
+</form>
