@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { Operadora } from 'src/app/Objetos/Operadora';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-gerencia-recarga',

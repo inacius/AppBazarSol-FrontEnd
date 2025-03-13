@@ -2,7 +2,7 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AbreFechaCaixa } from 'src/app/Objetos/AbreFechaCaixa';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { PainelDetalheFinalizaCaixaComponent } from '../painel-detalhe-finaliza-caixa/painel-detalhe-finaliza-caixa.component';
 
 @Component({

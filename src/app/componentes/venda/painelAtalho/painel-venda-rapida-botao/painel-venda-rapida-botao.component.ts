@@ -1,5 +1,5 @@
 import { Component, OnInit, Output,EventEmitter, Input } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { PainelVendaRecargaComponent } from '../painel-venda-recarga/painel-venda-recarga.component';
 import { ProdutoAtalho } from 'src/app/Objetos/ProdutoAtalho';
 

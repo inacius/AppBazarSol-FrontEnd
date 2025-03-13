@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, OnChanges } from '@angular/core';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { Produtos } from 'src/app/Objetos/Produtos';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({

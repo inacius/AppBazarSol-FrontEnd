@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter, Input, OnChanges } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Produtos } from 'src/app/Objetos/Produtos';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { IncluirProdutosComponent } from '../../incluir-produtos/incluir-produtos.component';

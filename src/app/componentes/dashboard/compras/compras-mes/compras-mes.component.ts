@@ -23,7 +23,7 @@ export class ComprasMesComponent implements OnInit {
   ];
 
 
-  @ViewChild('angularGrid', {static: false}) angularGrid: AngularTreeGridComponent;
+  @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;
         
   expandAll() {
     this.angularGrid.expandAll();

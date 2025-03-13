@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SaidaDeCaixa } from 'src/app/Objetos/SaidaDeCaixa';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-painel-saida-caixa',

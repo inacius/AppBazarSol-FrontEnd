@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, OnChanges, ChangeDetectorRef } from '@angular/core';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { ProdutoVenda } from 'src/app/Objetos/ProdutoVenda';
-import { MatTableDataSource, MatDialog, MatSnackBar } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatTableDataSource } from '@angular/material/table';
 import { VendaProduto } from 'src/app/Objetos/VendaProduto';
 import { IncluirVenda } from 'src/app/Objetos/IncluirVenda';
 import { PainelFinalizarVendaComponent } from '../painel-finalizar-venda/painel-finalizar-venda.component';
