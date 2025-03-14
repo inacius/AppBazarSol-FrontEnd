@@ -32,63 +32,57 @@ import { CalculadoraService } from '../../BancoDados/calculadora.service';
 
 
 @NgModule({
-  declarations: [
-    VenderComponent,
-    BuscaProdutoComponent,
-    ListaCompraAtualComponent,
-    PainelAddProdutoRapidoComponent,
-    PainelDescontoComponent,
-    PainelFinalizarVendaComponent,
-    VenderComponent,
-    PainelVendaRecargaComponent,
-    IncluirProdutosComponent,
-    PainelVendaRapidaComponent,
-    PainelVendaRapidaBotaoComponent,
-    ControladorQuantidadeComponent
-  ],
-  exports: [
-    VenderComponent,
-    BuscaProdutoComponent,
-    ListaCompraAtualComponent,
-    PainelAddProdutoRapidoComponent,
-    PainelDescontoComponent,
-    PainelFinalizarVendaComponent,
-    VenderComponent,
-    PainelVendaRecargaComponent,
-    IncluirProdutosComponent,
-    PainelVendaRapidaComponent,
-    PainelVendaRapidaBotaoComponent,
-    ControladorQuantidadeComponent
-  ],
-  entryComponents: [
-    PainelVendaRecargaComponent,
-    PainelFinalizarVendaComponent,
-    PainelAddProdutoRapidoComponent,
-    IncluirProdutosComponent,
-    PainelDescontoComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatToolbarModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatGridListModule,
-    MatDialogModule,
-    MatRadioModule,
-    FormsModule,
-    MatSnackBarModule,
-    ChartsModule,
-    MatSelectModule,
-    MatTabsModule    
-  ],
-  providers: [
-    BancoDados,
-    CalculadoraService,
-    CurrencyPipe
-  ],
+    declarations: [
+        VenderComponent,
+        BuscaProdutoComponent,
+        ListaCompraAtualComponent,
+        PainelAddProdutoRapidoComponent,
+        PainelDescontoComponent,
+        PainelFinalizarVendaComponent,
+        VenderComponent,
+        PainelVendaRecargaComponent,
+        IncluirProdutosComponent,
+        PainelVendaRapidaComponent,
+        PainelVendaRapidaBotaoComponent,
+        ControladorQuantidadeComponent
+    ],
+    exports: [
+        VenderComponent,
+        BuscaProdutoComponent,
+        ListaCompraAtualComponent,
+        PainelAddProdutoRapidoComponent,
+        PainelDescontoComponent,
+        PainelFinalizarVendaComponent,
+        VenderComponent,
+        PainelVendaRecargaComponent,
+        IncluirProdutosComponent,
+        PainelVendaRapidaComponent,
+        PainelVendaRapidaBotaoComponent,
+        ControladorQuantidadeComponent
+    ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatGridListModule,
+        MatDialogModule,
+        MatRadioModule,
+        FormsModule,
+        MatSnackBarModule,
+        ChartsModule,
+        MatSelectModule,
+        MatTabsModule
+    ],
+    providers: [
+        BancoDados,
+        CalculadoraService,
+        CurrencyPipe
+    ]
 })
 export class VendaModule { }
