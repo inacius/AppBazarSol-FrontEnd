@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IncluirOperadoraComponent } from './incluir-operadora.component';
 
@@ -6,7 +6,7 @@ describe('IncluirOperadoraComponent', () => {
   let component: IncluirOperadoraComponent;
   let fixture: ComponentFixture<IncluirOperadoraComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ IncluirOperadoraComponent ]
     })

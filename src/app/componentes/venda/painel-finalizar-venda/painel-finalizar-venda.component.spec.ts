@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PainelFinalizarVendaComponent } from './painel-finalizar-venda.component';
 
@@ -6,7 +6,7 @@ describe('PainelFinalizarVendaComponent', () => {
   let component: PainelFinalizarVendaComponent;
   let fixture: ComponentFixture<PainelFinalizarVendaComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PainelFinalizarVendaComponent ]
     })

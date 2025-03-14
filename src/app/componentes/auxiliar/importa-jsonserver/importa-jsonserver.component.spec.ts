@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ImportaJsonserverComponent } from './importa-jsonserver.component';
 
@@ -6,7 +6,7 @@ describe('ImportaJsonserverComponent', () => {
   let component: ImportaJsonserverComponent;
   let fixture: ComponentFixture<ImportaJsonserverComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ImportaJsonserverComponent ]
     })
