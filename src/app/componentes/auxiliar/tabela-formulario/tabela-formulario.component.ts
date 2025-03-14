@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-tabela-formulario',
@@ -8,9 +8,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class TabelaFormularioComponent implements OnInit {
 
-  formulario: FormGroup;
+  formulario: UntypedFormGroup;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit() 
   {

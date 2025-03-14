@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Compra } from 'src/app/Objetos/Compra';
 import { Fornecedor } from 'src/app/Objetos/Fornecedor';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
@@ -12,7 +12,7 @@ import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 })
 export class IncluirCompraComponent implements OnInit,OnChanges {
 
-  formCompra:FormGroup;
+  formCompra:UntypedFormGroup;
   compra:Compra = {id:0,valor:0,dataCompra:new Date(),parcelas:0,dataPrimeiroPagamento:new Date(),fornecedor:null,nf:123,dataUltimoPagamento:new Date()};
   listaFornecedores:Fornecedor[];
   selectedValue:Fornecedor = {id:0,nome:'',contato:'',email:'',endereco:'',telefone:''};
@@ -22,7 +22,7 @@ export class IncluirCompraComponent implements OnInit,OnChanges {
   dataCompraAjustado;
   dataPrimeiroPagamentoAjustado;
 
-  constructor(private formBuilder:FormBuilder,private bancoDados:BancoDados) {
+  constructor(private formBuilder:UntypedFormBuilder,private bancoDados:BancoDados) {
     bancoDados.ConsultaFornecedor(0).subscribe(resposta=>{
       console.log(resposta);
       this.listaFornecedores = resposta;

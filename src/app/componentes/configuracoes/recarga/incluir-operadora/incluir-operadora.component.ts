@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Operadora } from 'src/app/Objetos/Operadora';
 import { OperadoraValores } from 'src/app/Objetos/OperadoraValores';
 
@@ -32,12 +32,12 @@ export class IncluirOperadoraComponent implements OnInit {
   eNovo:boolean;
 
 
-  recargaForm:FormGroup;
+  recargaForm:UntypedFormGroup;
   valores:ControlaValores[]=new Array;
   valorAtualSelect:number=null;
   novaOperadora:Operadora;
 
-  constructor(private formBuilder:FormBuilder,private bancoDados:BancoDados) {
+  constructor(private formBuilder:UntypedFormBuilder,private bancoDados:BancoDados) {
     // if(this.operadoraInicial){
     //   this.eNovo = false;
     //   //console.log("True "+this.eNovo + " " + this.operadoraInicial.id );

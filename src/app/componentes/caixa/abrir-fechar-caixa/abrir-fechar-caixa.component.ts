@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormControl, UntypedFormBuilder, Validators, UntypedFormGroup } from '@angular/forms';
 import { AbreFechaCaixa } from 'src/app/Objetos/AbreFechaCaixa';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,7 +12,7 @@ import { PainelDetalheFinalizaCaixaComponent } from '../painel-detalhe-finaliza-
 })
 export class AbrirFecharCaixaComponent implements OnInit {
 
-  controleCaixaForm:FormGroup;
+  controleCaixaForm:UntypedFormGroup;
   listaDeDatas:Date[]=new Array;
   caixa:AbreFechaCaixa =
   {
@@ -34,7 +34,7 @@ export class AbrirFecharCaixaComponent implements OnInit {
   primeiroCarregamento=true;
   totalDia:number=0;
 
-  constructor(private formBuilder:FormBuilder,public dialog: MatDialog,private bancoDados:BancoDados) { 
+  constructor(private formBuilder:UntypedFormBuilder,public dialog: MatDialog,private bancoDados:BancoDados) { 
 
     bancoDados.ConsultaDatasCaixa().subscribe(resposta =>{
       this.listaDeDatas = resposta;

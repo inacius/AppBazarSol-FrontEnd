@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output, OnChanges } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { Fornecedor } from 'src/app/Objetos/Fornecedor';
 
@@ -11,12 +11,12 @@ import { Fornecedor } from 'src/app/Objetos/Fornecedor';
 export class IncluirFornecedorComponent implements OnInit,OnChanges {
 
 
-  formFornecedor:FormGroup;
+  formFornecedor:UntypedFormGroup;
   fornecedor:Fornecedor;
   @Input() fornecedorSelecionado:Fornecedor; // Array pq o filtro de fornecedor na consulta retorna um array.
   @Output() fornecedorAtualizado = new EventEmitter<boolean>();
 
-  constructor(private formBuilder:FormBuilder,private bancoDados:BancoDados) { 
+  constructor(private formBuilder:UntypedFormBuilder,private bancoDados:BancoDados) { 
     console.log(this.fornecedorSelecionado);
     // bancoDados.ConsultaFornecedor(this.fornecedorSelecionado.id).subscribe(resposta=>{
     //     this.fornecedor = resposta[0];

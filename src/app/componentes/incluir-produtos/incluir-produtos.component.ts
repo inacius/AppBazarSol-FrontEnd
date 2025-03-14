@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { IncluirProduto } from 'src/app/Objetos/IncluirProduto';
 import { Produtos } from 'src/app/Objetos/Produtos';
@@ -16,7 +16,7 @@ export class IncluirProdutosComponent implements OnInit,OnChanges {
   @Input() produtoAtual:Produtos[]= new Array;
   @Output() produtoAtualizado = new EventEmitter<boolean>();
   
-  incluirProduto: FormGroup;
+  incluirProduto: UntypedFormGroup;
   produtoIncluir:IncluirProduto;
   produtoAtualizar:Produtos;
   
@@ -27,7 +27,7 @@ export class IncluirProdutosComponent implements OnInit,OnChanges {
   
 
 
-  constructor(private formBuilder:FormBuilder,private bancoDados:BancoDados) {  }
+  constructor(private formBuilder:UntypedFormBuilder,private bancoDados:BancoDados) {  }
 
   ngOnChanges() {
     if(this.produtoAtual[0]){

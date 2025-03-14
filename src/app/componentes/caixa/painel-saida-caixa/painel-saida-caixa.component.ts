@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { SaidaDeCaixa } from 'src/app/Objetos/SaidaDeCaixa';
 import { BancoDados } from 'src/app/BancoDados/BancoDados.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class PainelSaidaCaixaComponent implements OnInit {
 
-  saidaDeCaixaForm:FormGroup;
+  saidaDeCaixaForm:UntypedFormGroup;
   saidaCaixa:SaidaDeCaixa=
   {
     id:0,
@@ -20,7 +20,7 @@ export class PainelSaidaCaixaComponent implements OnInit {
     comentario:''
   }
 
-  constructor(private formBuilder:FormBuilder,private bancoDados:BancoDados,public dialog:MatDialog) { }
+  constructor(private formBuilder:UntypedFormBuilder,private bancoDados:BancoDados,public dialog:MatDialog) { }
 
   ngOnInit() {
 
